@@ -63,34 +63,11 @@ body {
   text-align: center;
 }
 
-/* حاوية الشعارين */
-.logos-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
-  margin-bottom: 25px;
-}
-
-/* الشعار الجديد (كبير + متحرك) */
-.hero-img {
-  width: 100%;
-  max-width: 380px;
-  border-radius: 12px;
-  animation: softMove 5s ease-in-out infinite;
-}
-
-/* حركة ناعمة */
-@keyframes softMove {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-  100% { transform: translateY(0); }
-}
-
-/* الشعار القديم (صغير وموازي لنصف الكبير) */
+/* الشعار الصغير في الوسط فوق */
 .logo {
   max-width: 180px;
-  margin-top: 60px;
+  margin: 0 auto 30px auto;
+  display: block;
   animation: float 4s ease-in-out infinite;
 }
 
@@ -128,6 +105,22 @@ body {
   text-decoration: underline;
 }
 
+/* الشعار الكبير أسفل التواصل */
+.hero-img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 12px;
+  margin: 30px auto 0 auto;
+  display: block;
+  animation: softMove 5s ease-in-out infinite;
+}
+
+@keyframes softMove {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
 /* رسالة الشكر */
 .thanks {
   margin-top: 50px;
@@ -153,24 +146,12 @@ body {
 <!-- المحتوى -->
 <div class="container">
 
-  <!-- الشعارين جنب بعض -->
-  <div class="logos-wrapper">
-
-    <!-- الشعار القديم (يسار) -->
-    <img
-      class="logo"
-      src="https://i.pinimg.com/736x/bf/5c/82/bf5c8263b799892ebe3387e9b84c7f96.jpg"
-      alt="STA Logo Small"
-    >
-
-    <!-- الشعار الجديد (يمين) -->
-    <img
-      class="hero-img"
-      src="https://i.pinimg.com/736x/06/7c/8b/067c8b01d75524ee23833a573090b13e.jpg"
-      alt="STA Banner Large"
-    >
-
-  </div>
+  <!-- الشعار الصغير فوق المحتوى -->
+  <img
+    class="logo"
+    src="https://i.pinimg.com/736x/bf/5c/82/bf5c8263b799892ebe3387e9b84c7f96.jpg"
+    alt="STA Logo Small"
+  >
 
   <div class="subtitle" id="title">
     STA طريقك نحو النجاح 🎓
@@ -232,6 +213,13 @@ body {
     </p>
   </div>
 
+  <!-- الشعار الكبير أسفل التواصل -->
+  <img
+    class="hero-img"
+    src="https://i.pinimg.com/736x/06/7c/8b/067c8b01d75524ee23833a573090b13e.jpg"
+    alt="STA Banner Large"
+  >
+
   <!-- رسالة الشكر -->
   <div class="thanks" id="thanks">
     نشكركم على ثقتكم واهتمامكم بمركز STA.<br>
@@ -292,3 +280,4 @@ function toggleLanguage() {
 
 </body>
 </html>
+
