@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>STA Scholarships</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+  --main-green: #0f5c53;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #222;
+  line-height: 1.8;
+}
+
+/* الشريط العلوي */
+.top-bar {
+  background: var(--main-green);
+  color: white;
+  padding: 12px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-side {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sta-text {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* زر اللغة */
+.lang-btn {
+  background: white;
+  color: var(--main-green);
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* علم السودان */
+.flag {
+  height: 20px;
+}
+
+/* المحتوى */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* حاوية الشعارين */
+.logos-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+/* الشعار الجديد (كبير + متحرك) */
+.hero-img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 12px;
+  animation: softMove 5s ease-in-out infinite;
+}
+
+/* حركة ناعمة */
+@keyframes softMove {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+/* الشعار القديم (صغير وموازي لنصف الكبير) */
+.logo {
+  max-width: 180px;
+  margin-top: 60px;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+.subtitle {
+  font-size: 22px;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.content {
+  text-align: right;
+  font-size: 18px;
+}
+
+/* التواصل */
+.contact {
+  margin-top: 40px;
+  text-align: right;
+  font-size: 18px;
+}
+
+.contact a {
+  color: var(--main-green);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* رسالة الشكر */
+.thanks {
+  margin-top: 50px;
+  font-size: 15px;
+  color: var(--main-green);
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<!-- الشريط العلوي -->
+<div class="top-bar">
+  <div class="left-side">
+    <span class="sta-text">STA</span>
+    <button class="lang-btn" onclick="toggleLanguage()" id="langBtn">English</button>
+  </div>
+
+  <img class="flag" src="https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_Sudan.svg" alt="Sudan Flag">
+</div>
+
+<!-- المحتوى -->
+<div class="container">
+
+  <!-- الشعارين جنب بعض -->
+  <div class="logos-wrapper">
+
+    <!-- الشعار القديم (يسار) -->
+    <img
+      class="logo"
+      src="https://i.pinimg.com/736x/bf/5c/82/bf5c8263b799892ebe3387e9b84c7f96.jpg"
+      alt="STA Logo Small"
+    >
+
+    <!-- الشعار الجديد (يمين) -->
+    <img
+      class="hero-img"
+      src="https://i.pinimg.com/736x/06/7c/8b/067c8b01d75524ee23833a573090b13e.jpg"
+      alt="STA Banner Large"
+    >
+
+  </div>
+
+  <div class="subtitle" id="title">
+    STA طريقك نحو النجاح 🎓
+  </div>
+
+  <div class="content" id="content">
+    <p><strong>مركز STA للتقديم والقبول الجامعي</strong></p>
+
+    <p>
+      مركز STA هو مركز إلكتروني متخصص في التقديم والقبول الجامعي للطلاب في جميع
+      المراحل التعليمية، بما يشمل البكالوريوس والدراسات العليا.
+    </p>
+
+    <p>
+      نقدم خدمات التقديم للجامعات السودانية، والمنح الخارجية لطلاب الشهادة الثانوية،
+      إضافة إلى برامج الماجستير والدكتوراه.
+    </p>
+
+    <p>
+      نؤمن أن القبول بيد الله سبحانه وتعالى، ونسعى دائمًا للأخذ بالأسباب وتقديم
+      الدعم والتوجيه الصحيح للطالب خطوة بخطوة.
+    </p>
+
+    <p>
+      ✨ <strong>مركز STA – ثقة وخبرة في خدمة مستقبلك التعليمي.</strong>
+    </p>
+  </div>
+
+  <!-- التواصل -->
+  <div class="contact" id="contact">
+    <p><strong>📲 تواصل معنا</strong></p>
+
+    <p>
+      🔗 رابط قروب الواتساب:<br>
+      <a href="https://chat.whatsapp.com/KdWypNydasY6ee3dagqbzz?mode=wwt" target="_blank">
+        https://chat.whatsapp.com/KdWypNydasY6ee3dagqbzz?mode=wwt
+      </a>
+    </p>
+
+    <p>
+      🔗 صفحتنا على فيسبوك:<br>
+      <a href="https://www.facebook.com/profile.php?id=61583906380511" target="_blank">
+        https://www.facebook.com/profile.php?id=61583906380511
+      </a>
+    </p>
+
+    <p>
+      📧 البريد الإلكتروني:<br>
+      <a href="mailto:sta.scholarships@gmail.com">
+        sta.scholarships@gmail.com
+      </a>
+    </p>
+
+    <p>
+      📞 أرقام التواصل:<br>
+      0964868071<br>
+      0122126059<br>
+      0916393688
+    </p>
+  </div>
+
+  <!-- رسالة الشكر -->
+  <div class="thanks" id="thanks">
+    نشكركم على ثقتكم واهتمامكم بمركز STA.<br>
+    نسعد دائمًا بأن نكون جزءًا من رحلتكم التعليمية.<br>
+    نتمنى لكم دوام التوفيق والنجاح ✨
+  </div>
+
+</div>
+
+<script>
+let isArabic = true;
+
+function toggleLanguage() {
+  if (isArabic) {
+    document.documentElement.lang = "en";
+    document.documentElement.dir = "ltr";
+
+    document.getElementById("title").innerHTML =
+      "STA – Your Path to Success 🎓";
+
+    document.getElementById("content").innerHTML = `
+      <p><strong>STA Center for University Admissions</strong></p>
+      <p>
+        STA is an electronic center specialized in university admissions
+        for students at all academic levels.
+      </p>
+      <p>
+        We provide application services for Sudanese universities,
+        international scholarships, and postgraduate programs.
+      </p>
+      <p>
+        We believe acceptance is granted by God, and our role is guidance
+        and proper preparation.
+      </p>
+      <p>
+        ✨ <strong>STA – Trust and Experience for Your Educational Future.</strong>
+      </p>
+    `;
+
+    document.getElementById("contact").innerHTML = `
+      <p><strong>📲 Contact Us</strong></p>
+      <p><a href="https://chat.whatsapp.com/KdWypNydasY6ee3dagqbzz?mode=wwt" target="_blank">WhatsApp Group</a></p>
+      <p><a href="https://www.facebook.com/profile.php?id=61583906380511" target="_blank">Facebook Page</a></p>
+      <p><a href="mailto:sta.scholarships@gmail.com">sta.scholarships@gmail.com</a></p>
+      <p>📞 0964868071 | 0122126059 | 0916393688</p>
+    `;
+
+    document.getElementById("thanks").innerHTML =
+      "Thank you for trusting STA.<br>We wish you success and acceptance ✨";
+
+    document.getElementById("langBtn").innerText = "العربية";
+    isArabic = false;
+  } else {
+    location.reload();
+  }
+}
+</script>
+
+</body>
+</html>
